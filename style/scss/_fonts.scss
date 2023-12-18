@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap');
+
+@mixin DMSerifDisplay85{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 85px;
+  line-height: 125%;
+  letter-spacing: 1.7px;
+  color: $colorTextCounter
+}
+@mixin DMSerifDisplay65{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 125%;
+  color: $colorText
+}
+@mixin DMSerifDisplay50{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 125%;
+  letter-spacing: 1px;
+  color: $colorText
+}
+@mixin DMSerifDisplay40{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 125%;
+  color: $colorText
+}
+@mixin DMSerifDisplay25{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 125%;
+  letter-spacing: 0.5px;
+  color: $colorText
+}
+@mixin DMSerifDisplay25LSnone{
+  font-family:  'DM Serif Display', serif;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 125%;
+  color: $colorText
+}
+
+
+
+@mixin JostBTN18{
+  font-family:  'Jost', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 125%;
+  color: $colorTextBtn;
+}
+
+@mixin Jost22{
+  font-family:  'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 150%;
+  font-style: normal;
+  color: $colorText;
+  letter-spacing: 0.22px;
+}
+@mixin Jost20{
+  font-family:  'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 125%;
+  color: $colorText;
+}
+@mixin Jost16{
+  font-family:  'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.16px;
+  color: $colorText;
+}
