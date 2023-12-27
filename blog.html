@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/css/blogPage.css" />
     <link rel="stylesheet" href="./style/css/style.css" />
     <link rel="shortcut icon" href="./img/logo.svg" />
     <script src="https://unpkg.com/vue@next"></script>
@@ -28,9 +29,10 @@
             <p>Interno</p>
           </div>
         </a>
+
         <nav class="navMenu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">Project</a></li>
             <li><a href="./blog.html">Blog</a></li>
           </ul>
@@ -38,110 +40,72 @@
       </div>
     </header>
     <main>
-      <section class="baner content">
-        <h2 class="baner__h2">Let Your Home<br />Be Unique</h2>
-        <p class="baner__p">
-          There are many variations of the passages of<br />
-          lorem Ipsum fromavailable, majority.
-        </p>
-        <button class="baner__btn">
-          Get Started
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="17"
-            viewBox="0 0 18 17"
-            fill="none"
-          >
-            <path
-              d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887"
-              stroke="#CDA274"
-              stroke-width="2"
-              stroke-linecap="square"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </section>
-      <section class="project content">
-        <div class="project-header">
-          <h2 class="project-header__h2">Follow Our Projects</h2>
-          <p class="project-header__p">
-            It is a long established fact that a reader will be distracted by the of readable
-            content of page lookings at its layouts points.
-          </p>
+      <!-- BANER -->
+      <section class="main-header">
+        <img class="main-header__baner" src="./img/Blog/Baner.png" alt="baner" />
+        <div class="main-header-title">
+          <h2 class="main-header-title__title">Articles & News</h2>
+          <p class="adressPage">Home / Blog</p>
         </div>
-        <div id="projectMain" class="project-main">
-          <div v-for="projectCard in projectCards" :key="projectCard.id" class="project-main-card">
-            <div class="project-main-card-img">
-              <img :src="projectCard.img" alt="img_1" />
+      </section>
+      <!-- Latest Post -->
+      <section class="latestPost">
+        <div class="latestPost-content content">
+          <h3 class="latestPost__h3">Latest Post</h3>
+          <div class="latestPost-block">
+            <div class="latestPost-block-img">
+              <img src="./img/Blog/LatestPost.png" alt="Latest Post" />
             </div>
-            <div class="project-main-card-text">
-              <div class="project-main-card-text-info">
-                <h2 class="project-main-card-text-info__h2">{{ projectCard.title }}</h2>
-                <p class="project-main-card-text-info__p">{{ projectCard.text }}</p>
+            <div class="latestPost-block-text">
+              <h5 class="latestPost-block-text__title">
+                Low Cost Latest Invented Interior Designing Ideas
+              </h5>
+              <p class="latestPost-block-text__p">
+                Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim
+                maximus.posuere in.Contrary to popular belief.
+                <br />
+                <br />
+                Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+              </p>
+              <div class="latestPost-block-text-DateAndBtn">
+                <p class="latestPost-block-text-DateAndBtn__data">26 December, 2022</p>
+                <button class="blog-card__btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="52"
+                    height="53"
+                    viewBox="0 0 52 53"
+                    fill="none"
+                  >
+                    <circle cx="26" cy="26.5" r="26" fill="#F4F0EC" />
+                    <path
+                      d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141"
+                      stroke="#292F36"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
               </div>
-              <button class="project-main-card-text__btn">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="70"
-                  height="70"
-                  viewBox="0 0 70 70"
-                  fill="none"
-                >
-                  <circle cx="35" cy="35" r="35" fill="#F4F0EC" />
-                  <path
-                    d="M32 44L40 35L32 26"
-                    stroke="#292F36"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="counter">
-        <div class="counter-content content">
-          <div class="experiance counter-card">
-            <p class="experiance__counter counter__num">12</p>
-            <p class="experiance__text counter__text">Years Of Experiance</p>
-          </div>
-          <div class="successProject counter-card">
-            <p class="successProject__counter counter__num">85</p>
-            <p class="successProject__text counter__text">Success Project</p>
-          </div>
-          <div class="activeProject counter-card">
-            <p class="activeProject__counter counter__num">15</p>
-            <p class="activeProject__text counter__text">Active Project</p>
-          </div>
-          <div class="happyCustomers counter-card">
-            <p class="happyCustomers__counter counter__num">95</p>
-            <p class="happyCustomers__text counter__text">Happy Customers</p>
-          </div>
-        </div>
-      </section>
-      <section class="blog content">
-        <div class="blog-header">
-          <h2 class="blog-header__title">Articles & News</h2>
-          <p class="blog-header__p">
-            It is a long established fact that a reader will be distracted by the of readable
-            content of a page when lookings at its layouts the points of using.
-          </p>
-        </div>
-        <div id="blogMain" class="blog-main">
-          <div class="blog-main-card">
-            <div v-for="blogCard in blogCards" :key="blogCard.id" class="blog-card">
+      <!-- Articles & News -->
+      <section id="articlesNews" class="articlesNews">
+        <div class="articlesNews-content content">
+          <h3 class="latestPost__h3">Articles & News</h3>
+          <div class="articlesNews-main-card">
+            <div v-for="blog in articlesNewsBlogs" :key="blog.id" class="blog-card">
               <div class="blog-card-img">
-                <img :src="blogCard.img" alt="photo" />
-                <div class="blog-card-img-title">{{blogCard.titleImg}}</div>
+                <img :src="blog.img" alt="photo" />
+                <div class="blog-card-img-title">{{blog.titleImg}}</div>
               </div>
               <div class="blog-card-info">
-                <h3 class="blog-card-title">{{blogCard.title}}</h3>
+                <h3 class="blog-card-title">{{blog.title}}</h3>
                 <div class="blog-card-DateAndBtn">
-                  <p class="blog-card__date">{{blogCard.data}}</p>
+                  <p class="blog-card__date">{{blog.data}}</p>
                   <button class="blog-card__btn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -163,6 +127,29 @@
                 </div>
               </div>
             </div>
+          </div>
+          <div class="articlesNews-btnPage">
+            <button class="btnPage active">01</button>
+            <button class="btnPage">02</button>
+            <button class="btnPage">03</button>
+            <button class="btnPageNext">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="53"
+                height="52"
+                viewBox="0 0 53 52"
+                fill="none"
+              >
+                <circle cx="26.5" cy="26" r="25.5" stroke="#CDA274" />
+                <path
+                  d="M23.5571 32L29.5 25.3143L23.5571 18.6286"
+                  stroke="#292F36"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       </section>
@@ -242,69 +229,59 @@
         </div>
       </div>
     </footer>
-  </body>
-  <script>
-    // projectMain
-    const ProjectMain = {
-      data: () => ({
-        projectCards: [
-          {
-            id: 1,
-            img: './img/sectionProject/img_1.png',
-            title: 'Modern Kitchan',
-            text: 'Decor / Artchitecture',
-          },
-          {
-            id: 2,
-            img: './img/sectionProject/img_2.png',
-            title: 'Modern Kitchan',
-            text: 'Decor / Artchitecture',
-          },
-          {
-            id: 3,
-            img: './img/sectionProject/img_3.png',
-            title: 'Modern Kitchan',
-            text: 'Decor / Artchitecture',
-          },
-          {
-            id: 4,
-            img: './img/sectionProject/img_4.png',
-            title: 'Modern Kitchan',
-            text: 'Decor / Artchitecture',
-          },
-        ],
-      }),
-    };
-    Vue.createApp(ProjectMain).mount('#projectMain');
+    <script>
+      const ArticlesNews = {
+        data() {
+          return {
+            articlesNewsBlogs: [
+              {
+                id: 1,
+                img: './img/Blog/imgBlog_1.png',
+                titleImg: 'Kitchan Design',
+                title: 'Let’s Get Solution For Building Construction Work',
+                data: '26 December,2022',
+              },
+              {
+                id: 2,
+                img: './img/Blog/imgBlog_2.png',
+                titleImg: 'Living Design',
+                title: 'Low Cost Latest Invented Interior Designing Ideas.',
+                data: '22 December,2022',
+              },
+              {
+                id: 3,
+                img: './img/Blog/imgBlog_3.png',
+                titleImg: 'Interior Design',
+                title: 'Best For Any Office & Business Interior Solution',
+                data: '25 December,2022',
+              },
+              {
+                id: 4,
+                img: './img/Blog/imgBlog_4.png',
+                titleImg: 'Kitchan Design',
+                title: 'Let’s Get Solution For Building Construction Work',
+                data: '26 December,2022',
+              },
+              {
+                id: 5,
+                img: './img/Blog/imgBlog_5.png',
+                titleImg: 'Living Design',
+                title: 'Low Cost Latest Invented Interior Designing Ideas.',
+                data: '22 December,2022',
+              },
+              {
+                id: 6,
+                img: './img/Blog/imgBlog_6.png',
+                titleImg: 'Interior Design',
+                title: 'Best For Any Office & Business Interior Solution',
+                data: '25 December,2022',
+              },
+            ],
+          };
+        },
+      };
 
-    // blogMain
-    const BlogMain = {
-      data: () => ({
-        blogCards: [
-          {
-            id: 1,
-            img: './img/sectionBlog/img_1.png',
-            titleImg: 'Kitchan Design',
-            title: 'Let’s Get Solution For Building Construction Work',
-            data: '26 December,2022',
-          },
-          {
-            id: 2,
-            img: './img/sectionBlog/img_2.png',
-            titleImg: 'Living Design',
-            title: 'Low Cost Latest Invented Interior Designing Ideas',
-            data: '22 December,20222',
-          },
-          {
-            id: 3,
-            img: './img/sectionBlog/img_3.png',
-            titleImg: 'Interior Design',
-            title: 'Best For Any Office & Business Interior Solution',
-            data: '25 December,2022',
-          },
-        ],
-      }),
-    };
-    Vue.createApp(BlogMain).mount('#blogMain');
-  </script>
+      Vue.createApp(ArticlesNews).mount('#articlesNews');
+    </script>
+  </body>
 </html>

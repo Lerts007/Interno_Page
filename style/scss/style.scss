@@ -22,7 +22,7 @@ li{
 /* HEADER */
 
 .header-content {
-  padding: 53px 0 56px;
+  padding: 52px 0 52px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +55,7 @@ li{
 /*MAIN*/
 /*Section Baner*/
 .baner{
-  padding: 210px 52px;
+  padding: 215px 52px;
   background-image: url(../../img/backgroundSectionBanner.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -91,7 +91,7 @@ li{
 }
 .project-header{
   width: 737px;
-  margin: 96px auto 93px;
+  margin: 90px auto 93px;
   text-align: center
 }
 .project-header__h2{
@@ -205,10 +205,6 @@ li{
 .blog-card{
   width: 382px;
   padding: 21px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 62px;
   border: 1px solid #E7E7E7;
   box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
@@ -224,6 +220,7 @@ li{
   transition: fill 0.5s;
 }
 .blog-card-img{
+  height: 294px;
   position: relative;
   margin-bottom: 5px;
   border-top-left-radius: 45px;
@@ -238,6 +235,12 @@ li{
   bottom: 26px;
   border-radius: 8px 8px 8px 0;
   background-color: #FFF;
+}
+.blog-card-info{
+  height: 179px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .blog-card-title{
   @include DMSerifDisplay25;
