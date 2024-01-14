@@ -11,7 +11,7 @@ a{
   color:black
 }
 li{
-  list-style-type: none;
+  
   
 }
 .content {
@@ -41,6 +41,7 @@ li{
   align-items: center;
   gap: 49px;
   & li{
+    list-style-type: none;
     transition: transform 0.5s;
   &:hover{
     transform: scale(1.2);
@@ -297,6 +298,7 @@ li{
   margin-bottom: 25px;
 }
 .footer-navMenu li{
+  list-style-type: none;
   margin-bottom: 33px;
 }
 .footer-contact {
