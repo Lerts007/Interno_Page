@@ -21,9 +21,9 @@
 
       <nav class="navMenu">
         <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/">Project</router-link></li>
-          <li><router-link to="/blog">Blog</router-link></li>
+          <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
+          <li><router-link :to="{ name: 'Home' }">Project</router-link></li>
+          <li><router-link :to="{ name: 'Blog' }">Blog</router-link></li>
         </ul>
       </nav>
     </div>

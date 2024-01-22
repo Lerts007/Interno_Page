@@ -10,7 +10,7 @@ import BlogDetails from "./page/BlogDetails.vue";
 import "@/assets/style/scss/main.scss";
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
       name: "Home",

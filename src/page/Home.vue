@@ -53,7 +53,7 @@
               </p>
             </div>
             <button class="project-main-card-text__btn">
-              <router-link to="/blog_details">
+              <router-link :to="{ name: 'BlogDetails' }">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="70"
