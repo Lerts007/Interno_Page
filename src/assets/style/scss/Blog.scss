@@ -1,7 +1,4 @@
-@import "fonts";
-@import "color";
-
-.main-header{
+.main-header {
   position: relative;
   height: 356px;
   display: flex;
@@ -9,7 +6,7 @@
   align-items: flex-end;
   overflow: hidden;
 }
-.main-header__baner{
+.main-header__baner {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,52 +14,52 @@
   width: 100%;
   height: 100%;
 }
-.main-header-title{
+.main-header-title {
   position: relative;
   z-index: 2;
   padding: 41px 78px;
   background-color: #fff;
   border-radius: 37px 37px 0 0;
-  text-align: center
+  text-align: center;
 }
-.main-header-title__title{
+.main-header-title__title {
   @include DMSerifDisplay50;
 }
-.adressPage{
-  @include Jost22
+.adressPage {
+  @include Jost22;
 }
 /*LATEST POST*/
 
-.latestPost{
-  margin-top: 185px
+.latestPost {
+  margin-top: 185px;
 }
 
-.latestPost__h3{
+.latestPost__h3 {
   @include DMSerifDisplay50;
   margin-bottom: 26px;
 }
-.latestPost-block{
+.latestPost-block {
   padding: 22px;
   display: flex;
   gap: 65px;
   border-radius: 62px;
-  border: 1px solid #E7E7E7;
+  border: 1px solid #e7e7e7;
   box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 }
-.latestPost-block-img img{
+.latestPost-block-img img {
   border-radius: 45px;
 }
-.latestPost-block-text{
+.latestPost-block-text {
   padding: 51px 50px 51px 0;
 }
-.latestPost-block-text__title{
+.latestPost-block-text__title {
   @include DMSerifDisplay25;
   margin-bottom: 23px;
 }
-.latestPost-block-text__p{
+.latestPost-block-text__p {
   @include Jost22;
 }
-.articlesNews{
+.articlesNews {
   padding-top: 145px;
   padding-bottom: 197px;
 }

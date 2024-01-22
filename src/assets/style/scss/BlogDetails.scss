@@ -1,6 +1,3 @@
-@import "fonts";
-@import "color";
-
 .main-header {
   position: relative;
   height: 356px;
@@ -35,24 +32,22 @@
   padding-top: 180px;
   display: flex;
   gap: 56px;
- 
 }
 
 /* Content */
-.blogDetails-content{
+.blogDetails-content {
   min-width: 800px;
   max-width: 800px;
   margin-bottom: 95px;
-  & > p{
+  & > p {
     @include Jost22;
-
   }
 }
 .blogDetails-content__title {
   @include DMSerifDisplay50;
   margin-bottom: 23px;
 }
-.blogDetails-content-img{
+.blogDetails-content-img {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -74,30 +69,29 @@
   display: flex;
   justify-content: space-between;
 }
-.content-quote{
+.content-quote {
   margin-top: 40px;
   margin-bottom: 55px;
   padding: 35px 220px;
   text-align: center;
-  background-color: #F4F0EC;
-  border-radius: 50px ;
+  background-color: #f4f0ec;
+  border-radius: 50px;
   & p:first-child {
-    @include DMSerifDisplay200ItalicColorCDA274;
+    @include DMSerifDisplay150ItalicColorCDA274;
     margin-top: -75px;
   }
   & p:last-child {
     @include DMSerifDisplay25ItalicColorCDA274;
     margin-top: -5px;
-
   }
 }
-.blogDetails-content__list{
+.blogDetails-content__list {
   @include DMSerifDisplay20;
   margin-top: 20px;
   margin-bottom: 42px;
   list-style-type: none;
-  counter-reset: my-counter; 
-  & li{
+  counter-reset: my-counter;
+  & li {
     position: relative;
     max-width: 750px;
     margin-left: 20px;
@@ -111,17 +105,17 @@
     counter-increment: my-counter;
     margin-right: 8px;
   }
-  & span{
+  & span {
     @include Jost22;
   }
 }
 
-.blogDetails-content__img2{
-  margin-bottom: 34px
+.blogDetails-content__img2 {
+  margin-bottom: 34px;
 }
 
 /* Tags */
-.tags{
+.tags {
 }
 .tags-title {
   @include DMSerifDisplay25;
@@ -145,5 +139,3 @@
   color: #fff;
   background-color: #292f36;
 }
-
-

@@ -1,0 +1,34 @@
+header {
+  width: 1201px;
+  margin: 0 auto;
+}
+.header-content {
+  padding: 52px 0 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  @include DMSerifDisplay40;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.navMenu ul {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 49px;
+  & li {
+    transition: transform 0.5s;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  & a {
+    @include Jost20;
+  }
+}
