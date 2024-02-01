@@ -1,5 +1,7 @@
 <template>
-  <router-view />
+  <component :is="$route.meta.layout">
+    <router-view />
+  </component>
 </template>
 
 <script>
@@ -20,5 +22,9 @@ a {
 }
 li {
   list-style-type: none;
+}
+.content {
+  width: 1201px;
+  margin: 0 auto;
 }
 </style>

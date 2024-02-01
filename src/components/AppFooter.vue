@@ -56,9 +56,9 @@
       <div class="footer-navMenu">
         <h4>Pages</h4>
         <ul>
-          <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
-          <li><router-link :to="{ name: 'Home' }">Project</router-link></li>
-          <li><router-link :to="{ name: 'Blog' }">Blog</router-link></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/">Project</router-link></li>
+          <li><router-link to="/blog">Blog</router-link></li>
         </ul>
       </div>
       <div class="footer-contact">
@@ -78,3 +78,73 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {};
+</script>
+
+<style lang="scss">
+.footer {
+  width: 1201px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  margin-bottom: 200px;
+}
+.logo {
+  @include DMSerifDisplay40;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.footer-logo {
+  max-width: 393px;
+}
+
+.footer-logo h4 {
+  @include DMSerifDisplay40;
+}
+
+.footer-logo p {
+  @include Jost22;
+  margin-top: 18px;
+  margin-bottom: 32px;
+}
+.footer-logo-socialNetwork {
+  display: flex;
+  gap: 54px;
+}
+.footer-navMenu {
+  @include Jost22;
+  margin-right: 283px;
+}
+
+.footer-navMenu h4 {
+  @include DMSerifDisplay25;
+  margin-bottom: 25px;
+}
+.footer-navMenu li {
+  margin-bottom: 33px;
+}
+.footer-contact {
+}
+.footer-contact address {
+  width: 258px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-contact h4 {
+  @include DMSerifDisplay25LSnone;
+  margin-bottom: 25px;
+}
+.footer-contact p {
+  @include Jost22;
+  margin-bottom: 15px;
+}
+.footer-contact a {
+  @include Jost22;
+  margin-bottom: 32px;
+}
+</style>

@@ -1,5 +1,4 @@
 <template>
-  <Header />
   <div class="errorPage content">
     <div class="errorPage-info">
       <h1>404</h1>
@@ -26,25 +25,63 @@
       </button>
     </div>
     <div class="errorPage-img">
-      <img :src="imgError" alt="Изображение" />
+      <img src="img/errorPage/img_1.jpg" alt="Изображение" />
     </div>
   </div>
 </template>
 
 <script>
-import Header from "../components/Header.vue";
-
 export default {
   name: "404",
-  components: {
-    Header,
-  },
-  data() {
-    return {
-      imgError: require("@/assets/img/errorPage/img_1.jpg"),
-    };
-  },
+  components: {},
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+/*Error Page*/
+.content {
+  width: 1201px;
+  margin: 0 auto;
+}
+.errorPage {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.errorPage-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & h1 {
+    @include DMSerifDisplay250ColorCDA274;
+  }
+  & p {
+    @include DMSerifDisplay35;
+  }
+}
+.errorPage-info__btn {
+  width: 253px;
+  height: 75px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 18px;
+  background: #292f36;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  text-align: center;
+  & a {
+    @include JostBTN18;
+    color: $colorTextBtn;
+  }
+  & svg {
+    margin-left: 12px;
+  }
+}
+.errorPage-img {
+  height: 550px;
+  border-bottom-left-radius: 353px;
+  overflow: hidden;
+}
+</style>
