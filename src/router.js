@@ -1,40 +1,40 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHistory } from 'vue-router';
 
-import Home from "./page/Home.vue";
-import Blog from "./page/Blog.vue";
-import Project from "./page/Projecct.vue";
-import BlogDetails from "./page/BlogDetails.vue";
-import ErrorPage from "./page/ErrorPage.vue";
+import Home from './page/Home.vue';
+import Blog from './page/Blog.vue';
+import Project from './page/Projecct.vue';
+import BlogDetails from './page/BlogDetails.vue';
+import ErrorPage from './page/ErrorPage.vue';
 
-import DefaultLayout from "@/layouts/default.vue";
-import ErrorLayout from "@/layouts/error.vue";
+import DefaultLayout from '@/layouts/default.vue';
+import ErrorLayout from '@/layouts/error.vue';
 
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes: [
     {
-      name: "Home",
-      path: "/",
+      name: 'Home',
+      path: '/',
       component: Home,
     },
     {
-      name: "Project",
-      path: "/project",
+      name: 'Project',
+      path: '/project',
       component: Project,
     },
     {
-      name: "Blog",
-      path: "/blog",
+      name: 'Blog',
+      path: '/blog',
       component: Blog,
     },
     {
-      name: "BlogDetails",
-      path: "/blog_details",
+      name: 'BlogDetails',
+      path: '/blog_details',
       component: BlogDetails,
     },
     {
-      name: "ErrorPage",
-      path: "/:catchAll(.*)",
+      name: 'ErrorPage',
+      path: '/:catchAll(.*)',
       component: ErrorPage,
       meta: { layout: ErrorLayout },
     },
