@@ -294,7 +294,7 @@ export default {
 }
 .counter-card {
   padding-right: 80px;
-  border-right: 1px solid $colorTextCounter;
+  border-right: 1px solid $colorAccent;
 }
 .counter-card:last-child {
   padding-right: 0;

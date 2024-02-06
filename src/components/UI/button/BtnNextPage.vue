@@ -1,12 +1,17 @@
 <template>
-  <button class="btnPage">{{ numberPage }}</button>
+  <button class="btnPage">{{ page }}</button>
 </template>
 
 <script>
 export default {
   props: {
-    numberPage: Number,
+    numberPage: [String, Number],
   },
+  computed: {
+    page(){
+      return '0' + this.numberPage
+    }
+  }
 };
 </script>
 

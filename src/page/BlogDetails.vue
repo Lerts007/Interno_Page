@@ -1,21 +1,15 @@
 <template>
   <!-- BANER -->
   <section class="main-header">
-    <img class="main-header__baner" :src="Baner" alt="baner" />
+    <img class="main-header__baner" src="img/BlogDetails/StartImg.jpg" alt="StartImg" />
   </section>
 
   <section id="blogDetails" class="blogDetails content">
     <!-- Contetn -->
     <div class="blogDetails-content">
-      <h3 class="blogDetails-content__title">
-        Let’s Get Solution for Building Construction Work
-      </h3>
+      <h3 class="blogDetails-content__title">Let’s Get Solution for Building Construction Work</h3>
       <div class="blogDetails-content-img">
-        <img
-          class="blogDetails-content__img"
-          :src="articles[tag].img1"
-          :alt="tag"
-        />
+        <img class="blogDetails-content__img" :src="articles[tag].img1" :alt="tag" />
       </div>
 
       <div class="content-date">
@@ -23,15 +17,13 @@
         <p>Interior / Home / Decore</p>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-        turpmaximus.posuere in.Contrary to popular belief.There are many
-        variations of passages of Lorem Ipsum available, but the majority have
-        suffered alteration in some form, by injecthumour, or randomised words
-        which don't look even slightly believable.
+        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
+        to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injecthumour, or randomised words which
+        don't look even slightly believable.
         <br /><br />
-        Embarrassing hidden in the middle of text. All the Lorem Ipsum
-        generators on the Internet tend to repeat predefined chunks as
-        necessary.
+        Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet
+        tend to repeat predefined chunks as necessary.
       </p>
       <div class="content-quote">
         <p>,,</p>
@@ -39,115 +31,86 @@
       </div>
       <h3 class="blogDetails-content__title">Design sprints are great</h3>
       <p>
-        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-        turpmaximus.posuere in.Contrary to popular belief.There are many
-        variations of passages of Lorem Ipsum available, but the majority have
-        suffered.
+        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
+        to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered.
       </p>
       <ol class="blogDetails-content__list">
         <li>
           <span>
-            Contrary to popular belief.There are many variations of passages of
-            Lorem Ipsum available, but the majority have suffered.
+            Contrary to popular belief.There are many variations of passages of Lorem Ipsum
+            available, but the majority have suffered.
           </span>
         </li>
         <li>
           <span>
-            Contrary to popular belief.There are many variations of passages of
-            Lorem Ipsum available, but the majority have suffered.
+            Contrary to popular belief.There are many variations of passages of Lorem Ipsum
+            available, but the majority have suffered.
           </span>
         </li>
         <li>
           <span>
-            Contrary to popular belief.There are many variations of passages of
-            Lorem Ipsum available, but the majority have suffered.
+            Contrary to popular belief.There are many variations of passages of Lorem Ipsum
+            available, but the majority have suffered.
           </span>
         </li>
       </ol>
       <div class="blogDetails-content-img blogDetails-content__img2">
-        <img
-          class="blogDetails-content__img"
-          :src="articles[tag].img2"
-          alt="tag"
-        />
+        <img class="blogDetails-content__img" :src="articles[tag].img2" alt="tag" />
       </div>
 
       <p>
-        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
-        turpmaximus.posuere in.Contrary to popular belief.There are many
-        variations of passages of Lorem Ipsum available, but the majority have
-        suffered.
+        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
+        to popular belief.There are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered.
       </p>
     </div>
+
     <!-- Tags -->
-    <div id="tags" class="tags">
-      <h4 class="tags-title">Tags</h4>
-      <div class="tags-main">
-        <div
-          class="tags-main-block tags-main-block__activ"
-          @click="tagAdd('Kitchen', $event)"
-        >
-          <p>Kitchen</p>
-        </div>
-        <div class="tags-main-block" @click="tagAdd('Bedroom', $event)">
-          <p>Bedroom</p>
-        </div>
-        <div class="tags-main-block" @click="tagAdd('Building', $event)">
-          <p>Building</p>
-        </div>
-        <div class="tags-main-block" @click="tagAdd('Architecture', $event)">
-          <p>Architecture</p>
-        </div>
-        <div
-          class="tags-main-block"
-          @click="tagAdd('Kitchen Planning', $event)"
-        >
-          <p>Kitchen Planning</p>
-        </div>
-      </div>
-    </div>
+    <BtnBlogDetails :tags="Object.keys(articles)" v-model:modelValue="tag" />
   </section>
 </template>
 
 <script>
+import BtnBlogDetails from '@/components/BtnBlogDetails.vue';
+
 export default {
-  name: "BlogDetails",
-  components: {},
+  name: 'BlogDetails',
+  components: { BtnBlogDetails },
   data() {
     return {
-      Baner: "img/BlogDetails/Baner.jpg",
-      tag: "Kitchen",
+      tag: 'Kitchen',
       articles: {
         Kitchen: {
-          img1: "img/BlogDetails/img_1.png",
-          img2: "img/BlogDetails/img_2.png",
+          img1: 'img/BlogDetails/img_1.png',
+          img2: 'img/BlogDetails/img_2.png',
         },
         Bedroom: {
-          img1: "img/BlogDetails/img_3.jpg",
-          img2: "img/BlogDetails/img_4.jpg",
+          img1: 'img/BlogDetails/img_3.jpg',
+          img2: 'img/BlogDetails/img_4.jpg',
         },
         Building: {
-          img1: "img/BlogDetails/img_5.jpg",
-          img2: "img/BlogDetails/img_6.jpg",
+          img1: 'img/BlogDetails/img_5.jpg',
+          img2: 'img/BlogDetails/img_6.jpg',
         },
         Architecture: {
-          img1: "img/BlogDetails/img_7.jpg",
-          img2: "img/BlogDetails/img_8.webp",
+          img1: 'img/BlogDetails/img_7.jpg',
+          img2: 'img/BlogDetails/img_8.webp',
         },
-        "Kitchen Planning": {
-          img1: "img/BlogDetails/img_9.jpg",
-          img2: "img/BlogDetails/img_10.jpg",
+        'Kitchen Planning': {
+          img1: 'img/BlogDetails/img_9.jpg',
+          img2: 'img/BlogDetails/img_10.jpg',
         },
       },
     };
   },
   methods: {
     tagAdd(tag, e) {
-      const tags = document.querySelectorAll(".tags-main-block");
-      tags.forEach((e) => e.classList.remove("tags-main-block__activ"));
-      e.target.tagName === "P"
-        ? e.target.parentNode.classList.toggle("tags-main-block__activ")
-        : e.target.classList.toggle("tags-main-block__activ");
+      const tags = document.querySelectorAll('.tags-main-block');
+      tags.forEach((e) => e.classList.remove('tags-main-block__activ'));
+      e.target.tagName === 'P'
+        ? e.target.parentNode.classList.toggle('tags-main-block__activ')
+        : e.target.classList.toggle('tags-main-block__activ');
       this.tag = tag;
     },
   },

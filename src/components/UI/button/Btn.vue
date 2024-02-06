@@ -33,10 +33,16 @@ export default {};
   cursor: pointer;
   border: none;
   border-radius: 25px;
+  & circle {
+    transition: fill 0.3s;
+  }
 }
 @media (hover: hover) {
   .blog-card:hover .card__btn svg circle {
     fill: #fff;
+  }
+  circle:hover {
+    fill: $colorAccent;
   }
 }
 </style>

@@ -57,7 +57,7 @@
         <h4>Pages</h4>
         <ul>
           <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/">Project</router-link></li>
+          <li><router-link to="/project">Project</router-link></li>
           <li><router-link to="/blog">Blog</router-link></li>
         </ul>
       </div>

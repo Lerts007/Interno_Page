@@ -18,13 +18,8 @@
   <section id="articlesNews" class="articlesNews">
     <div class="articlesNews-content content">
       <h3 class="latestPost__h3">Articles & News</h3>
-      <div class="articlesNews-main-card">
-        <CardProduct
-          v-for="blog in articlesNewsBlogs"
-          :key="blog.id"
-          :blog="blog"
-        />
-      </div>
+      <CardProduct :blogs="articlesNewsBlogs" />
+
       <div class="articlesNews-btnPage">
         <button class="btnPage active">01</button>
         <button class="btnPage">02</button>
@@ -53,57 +48,57 @@
 </template>
 
 <script>
-import BlogBlock from "@/components/BlogBlock/BlogBlock.vue";
-import CardProduct from "@/components/CardProduct/CardProduct.vue";
-import BtnNextPage from "@/components/UI/button/BtnNextPage.vue";
+import BlogBlock from '@/components/BlogBlock/BlogBlock.vue';
+import CardProduct from '@/components/CardProduct/CardProduct.vue';
+import BtnNextPage from '@/components/UI/button/BtnNextPage.vue';
 
 export default {
-  name: "Blog",
+  name: 'Blog',
   components: { CardProduct, BlogBlock, BtnNextPage },
   data() {
     return {
       articlesNewsBlogs: [
         {
           id: 1,
-          img: "img/Blog/imgBlog_1.png",
-          titleImg: "Kitchan Design",
-          title: "Let’s Get Solution For Building Construction Work",
-          data: "26 December,2022",
+          img: 'img/Blog/imgBlog_1.png',
+          titleImg: 'Kitchan Design',
+          title: 'Let’s Get Solution For Building Construction Work',
+          data: '26 December,2022',
         },
         {
           id: 2,
-          img: "img/Blog/imgBlog_2.png",
-          titleImg: "Living Design",
-          title: "Low Cost Latest Invented Interior Designing Ideas.",
-          data: "22 December,2022",
+          img: 'img/Blog/imgBlog_2.png',
+          titleImg: 'Living Design',
+          title: 'Low Cost Latest Invented Interior Designing Ideas.',
+          data: '22 December,2022',
         },
         {
           id: 3,
-          img: "img/Blog/imgBlog_3.png",
-          titleImg: "Interior Design",
-          title: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
+          img: 'img/Blog/imgBlog_3.png',
+          titleImg: 'Interior Design',
+          title: 'Best For Any Office & Business Interior Solution',
+          data: '25 December,2022',
         },
         {
           id: 4,
-          img: "img/Blog/imgBlog_4.png",
-          titleImg: "Kitchan Design",
-          title: "Let’s Get Solution For Building Construction Work",
-          data: "26 December,2022",
+          img: 'img/Blog/imgBlog_4.png',
+          titleImg: 'Kitchan Design',
+          title: 'Let’s Get Solution For Building Construction Work',
+          data: '26 December,2022',
         },
         {
           id: 5,
-          img: "img/Blog/imgBlog_5.png",
-          titleImg: "Living Design",
-          title: "Low Cost Latest Invented Interior Designing Ideas.",
-          data: "22 December,2022",
+          img: 'img/Blog/imgBlog_5.png',
+          titleImg: 'Living Design',
+          title: 'Low Cost Latest Invented Interior Designing Ideas.',
+          data: '22 December,2022',
         },
         {
           id: 6,
-          img: "img/Blog/imgBlog_6.png",
-          titleImg: "Interior Design",
-          title: "Best For Any Office & Business Interior Solution",
-          data: "25 December,2022",
+          img: 'img/Blog/imgBlog_6.png',
+          titleImg: 'Interior Design',
+          title: 'Best For Any Office & Business Interior Solution',
+          data: '25 December,2022',
         },
       ],
     };
@@ -171,7 +166,7 @@ export default {
 .btnPage {
   width: 52px;
   height: 52px;
-  font-family: "Jost", sans-serif;
+  font-family: 'Jost', sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
