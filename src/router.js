@@ -33,6 +33,11 @@ export const router = createRouter({
       component: BlogDetails,
     },
     {
+      name: 'ProjectDetails',
+      path: '/project_details',
+      component: () => import('./page/ProjectDetails.vue'),
+    },
+    {
       name: 'ErrorPage',
       path: '/:catchAll(.*)',
       component: ErrorPage,

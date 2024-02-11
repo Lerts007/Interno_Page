@@ -1,8 +1,5 @@
 <template>
-  <!-- BANER -->
-  <section class="main-header">
-    <img class="main-header__baner" src="img/BlogDetails/StartImg.jpg" alt="StartImg" />
-  </section>
+  <Baner :img="'img/BlogDetails/StartImg.jpg'" />
 
   <section id="blogDetails" class="blogDetails content">
     <!-- Contetn -->
@@ -72,11 +69,12 @@
 </template>
 
 <script>
+import Baner from '@/components/Baner.vue';
 import BtnBlogDetails from '@/components/BtnBlogDetails.vue';
 
 export default {
   name: 'BlogDetails',
-  components: { BtnBlogDetails },
+  components: { BtnBlogDetails, Baner },
   data() {
     return {
       tag: 'Kitchen',
@@ -118,36 +116,6 @@ export default {
 </script>
 
 <style lang="scss">
-.main-header {
-  position: relative;
-  height: 356px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.main-header__baner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-}
-.main-header-title {
-  position: relative;
-  z-index: 2;
-  padding: 41px 78px;
-  background-color: #fff;
-  border-radius: 37px 37px 0 0;
-  text-align: center;
-}
-.main-header-title__title {
-  @include DMSerifDisplay50;
-}
-.adressPage {
-  @include Jost22;
-}
 .blogDetails {
   padding-top: 180px;
   display: flex;
